@@ -4,15 +4,17 @@ pipeline{
 
       stages {
           stage('git checkout'){
-              steps{
+             steps{
                   git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
               }
           }
           stage('validation'){
-           steps{
+            steps{
                sh '''
               mvn validate
 
                '''
            }
-          }
+     }
+
+}
